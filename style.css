@@ -1,0 +1,117 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, #2c3e50, #34495e);
+}
+
+.weather-card {
+  position: relative;
+  background-color: #34495e;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform-origin: center bottom;
+  animation: cardEntrance 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+}
+
+@keyframes cardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    animation: wave-animation 2s infinite linear;
+  }
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.info {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #ecf0f1;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+  animation: textEntrance 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+}
+
+@keyframes textEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.date-time {
+  color: #bdc3c7;
+  margin-top: -8px;
+  animation: textEntrance 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.2s both;
+}
+
+.temperature {
+  font-size: 2.5em;
+  color: #e74c3c;
+  margin: 10px 0;
+  animation: temperaturePulse 1.5s infinite alternate;
+}
+
+@keyframes temperaturePulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.min-max {
+  color: #bdc3c7;
+  font-size: 0.9em;
+  margin-top: -8px;
+  animation: fadeInUp 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.4s both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  
+ 
